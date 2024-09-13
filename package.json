@@ -3,10 +3,10 @@
   "description": "just a package",
   "version": "0.0.2",
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "module": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup",
+    "build": "rollup -c",
     "test": "jest"
   },
   "keywords": [
@@ -15,11 +15,16 @@
   "author": "januki",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@testing-library/jest-dom": "^6.5.0",
     "@types/jest": "^29.5.12",
     "jest": "^29.7.0",
+    "rollup": "^4.21.3",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
+    "tslib": "^2.7.0",
     "tsup": "^8.2.4",
     "typescript": "^5.6.2"
   },
